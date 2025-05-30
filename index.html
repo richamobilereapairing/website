@@ -145,7 +145,58 @@
           },
         }
       </script>
+      
+      <!-- Add blur effect to navbar -->
+      <style>
+        #navbar {
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          background-color: rgba(23, 23, 23, 0.8); /* Semi-transparent dark background */
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
 
+      /* Glassmorphism for hero buttons */
+      .hero-button {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        transition: all 0.3s ease;
+      }
+
+      .hero-button:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
+      }
+
+      /* Custom glow effect */
+      .hero-button {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: 0.5s;
+      }
+
+      .hero-button:hover::before {
+        left: 100%;
+      }
+      </style>
       <!-- Utilities and Components -->
       <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
       <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
@@ -178,6 +229,7 @@
         ::-webkit-scrollbar {
           width: 0px;
         }
+        
         
         ::-webkit-scrollbar-track {
           background: #f1f1f1;
@@ -440,9 +492,9 @@
                 <htmlcode id="el-57clac0e">
 <div id="root">
   <section id="hero" class="bg-gradient-to-br from-gray-900 to-gray-800 text-white pt-16 min-h-[70vh] overflow-hidden">
-    <div class="container mx-auto px-4 py-20" id="el-g1zt1wl7">
-        <div class="flex flex-col md:flex-row items-center justify-between" id="el-9ueev90s">
-            <div class="md:w-1/2 mb-10 md:mb-0" id="el-63rrgxer">
+    <div class="container relative mx-auto px-4 py-20 z-10" id="el-g1zt1wl7">
+            <div class="flex flex-col md:flex-row items-center justify-between relative" id="el-9ueev90s">
+                <div class="md:w-1/2 mb-10 md:mb-0 relative z-20" id="el-63rrgxer">
                 <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-slide-up opacity-0" style="--delay: 0.2s; font-family: Caveat, system-ui, sans-serif;" id="el-r6s58x3a">
                  RICHA MOBILE <br id="el-x0r2mssn"><span class="text-blue-400" id="el-pb677e8z">REPAIRING</span>
                 </h1>
@@ -468,9 +520,17 @@
                       </svg>
                       Jaganpura
                   </a>
+                  <a href="https://maps.app.goo.gl/w3nGF4HtLAXqm21y5" target="_blank" class="inline-flex items-center px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-all transform hover:scale-105" id="el-wd7l6vk8">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" id="el-y89qdjzz">
+                        <path d="M12 0C7.802 0 4 3.403 4 7.602 4 11.8 7.469 16.812 12 24c4.531-7.188 8-12.2 8-16.398C20 3.403 16.199 0 12 0zm0 11a3 3 0 110-6 3 3 0 010 6z" id="el-yu3wxz1d"></path>
+                    </svg>
+                    Sahpur
+                  </a>
+                  
+                  
                 </div>
             </div>
-            <div class="md:w-1/2 animate-float relative" id="el-ql5m1p0l">
+            <div class="md:w-1/2 animate-float relative z-1</svg>0" id="el-ql5m1p0l">
                 <div class="absolute -top-20 -right-20 w-40 h-40 bg-blue-500 rounded-full filter blur-3xl opacity-20 animate-pulse" id="el-u1wozabs"></div>
                 <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-green-500 rounded-full filter blur-3xl opacity-20 animate-pulse" id="el-qxonl0vl"></div>
                 <div class="relative bg-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-700 backdrop-blur-lg" id="el-utt2z4u5">
@@ -483,7 +543,7 @@
                     <div class="space-y-6" id="el-lj3becar">
                         <div class="flex items-center gap-4 mb-6" id="el-pu7pt54u">
                             <span class="w-12 h-12 rounded-xl bg-blue-500 flex items-center justify-center text-white" id="el-1bcgfrzj">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="el-074pkmlz">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" id="el-07</a>4pkmlz">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" id="el-fs9v5mp2"></path>
                                 </svg>
                             </span>
